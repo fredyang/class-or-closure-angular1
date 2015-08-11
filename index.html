@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/angularjs/angular.js"></script>
+    <script src="build/app.js"></script>
+    <script src="build/directives.js"></script>
+    <script src="build/services.js"></script>
+    <script src="build/controllers.js"></script>
+</head>
+<body>
+
+<h1>class demo</h1>
+<counter-widget-class delay="1000"></counter-widget-class>
+<counter-widget-class delay="2000"></counter-widget-class>
+
+<div ng-controller="ClassController as vm">
+    <div ng-if="!vm.isAuthenticated">
+        <h2>Login</h2>
+
+        <p>User Name: <input ng-model="vm.userName"></p>
+
+        <p>Password: <input ng-model="vm.password"></p>
+
+        <p><input type="button" value="Login" ng-click="vm.login()"></p>
+    </div>
+    <div ng-if="vm.isAuthenticated">
+        <h2>Welcome</h2>
+        {{vm.userName}}
+    </div>
+</div>
+
+<hr/>
+<h1>closure demo</h1>
+
+<counter-widget-closure delay="1000"></counter-widget-closure>
+<counter-widget-closure delay="2000"></counter-widget-closure>
+
+<div ng-controller="ClosureController as vm">
+    <div ng-if="!vm.isAuthenticated">
+        <h2>Login</h2>
+
+        <p>User Name: <input ng-model="vm.userName"></p>
+
+        <p>Password: <input ng-model="vm.password"></p>
+
+        <p><input type="button" value="Login" ng-click="vm.login()"></p>
+    </div>
+    <div ng-if="vm.isAuthenticated">
+        <h2>Welcome</h2>
+        {{vm.userName}}
+    </div>
+</div>
+</body>
+</html>
