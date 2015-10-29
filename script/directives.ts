@@ -43,8 +43,7 @@ angular.module('app').directive("counterWidgetClass", function ($timeout) {
 
 //---- directive implemented by closure ---------
 //implementing ng.IDirective is optional
-angular.module('app').directive('counterWidgetClosure',
-    function ($timeout):ng.IDirective {
+angular.module('app').directive('counterWidgetClosure', function ($timeout) {
         //$timeout is closured and it is accessible to inner function
         return {
             restrict: "EAC",

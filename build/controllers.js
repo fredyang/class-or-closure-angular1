@@ -20,6 +20,7 @@ var ClassController = (function () {
 })();
 angular.module('app').controller('ClassController', ClassController);
 /////---------controller implemented by closure--------------
+//implementing IUser is optional
 angular.module('app').controller('ClosureController', ["closureBackend", function (closureBackend) {
     //here I want to avoid to use "this.xxx = yyy"
     // and explicitly return an object instead implicitly return this

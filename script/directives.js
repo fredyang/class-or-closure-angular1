@@ -31,13 +31,13 @@ var CounterWidget = (function () {
     }
     return CounterWidget;
 })();
-angular.module('app').directive("counterWidgetClass", ["$timeout", function ($timeout) {
+angular.module('app').directive("counterWidgetClass", function ($timeout) {
     //directive is still created using closure under the hood
     return new CounterWidget($timeout);
-}]);
+});
 //---- directive implemented by closure ---------
 //implementing ng.IDirective is optional
-angular.module('app').directive('counterWidgetClosure', ["$timeout", function ($timeout) {
+angular.module('app').directive('counterWidgetClosure', function ($timeout) {
     //$timeout is closured and it is accessible to inner function
     return {
         restrict: "EAC",
@@ -57,4 +57,5 @@ angular.module('app').directive('counterWidgetClosure', ["$timeout", function ($
             })();
         }
     };
-}]);
+});
+//# sourceMappingURL=directives.js.map
